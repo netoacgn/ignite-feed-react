@@ -4,17 +4,17 @@
     padding: 2.5rem;
 }
 
-.post + .post {
+.post+.post {
     margin-top: 2rem;
 }
 
-.post > header {
+.post>header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.post > header time {
+.post>header time {
     font-size: 0.875rem;
     color: var(--gray-400);
 }
@@ -79,7 +79,7 @@
     max-height: none;
 }
 
-.commentForm > form {
+.commentForm>form {
     line-height: 1.6;
     color: var(--gray-100);
 }
@@ -110,7 +110,12 @@
     transition: background-color 0.1s;
 }
 
-.commentForm button[type=submit]:hover {
+.commentForm button[type=submit]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.commentForm button[type=submit]:not(:disabled):hover {
     background: var(--green-300);
 }
 
